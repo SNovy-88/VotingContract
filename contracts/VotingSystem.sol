@@ -29,9 +29,9 @@ contract VotingSystem {
 
     //put in your own vote for a fee of 0.001 sepolia
     function vote(string memory _option) payable external {
-        require(!hasVoted[msg.sender], "You have already voted");
-        require(msg.value > 0.001 ether);
-        require(isValidOption(_option), "Invalid option");
+        require(!hasVoted[msg.sender], "You have already voted.");
+        require(msg.value > 0.001 ether, "You must pay at least 0.002 ether to vote.");
+        require(isValidOption(_option), "Invalid option, check your spelling.");
 
         votes[_option]++; //increases vote count for selected option
         hasVoted[msg.sender] = true; //adds voters address to hasVoted mapping
