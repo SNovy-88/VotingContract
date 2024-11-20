@@ -1,6 +1,6 @@
 # VotingContract - User Guide
 Contract address on Sepolia Blockchain:
-XXXXXX
+0x9287De506a2c758358042cf04461B06D354aCe65
 
 ## Key Features
 * Vote on a predefined question with multiple options
@@ -36,7 +36,7 @@ XXXXXX
 * Connect to contract
   ```
   const abi = require('./VotingSystem.json').abi; //update to your location of the file
-  const contractAddress = "XXXXX";
+  const contractAddress = "0x9287De506a2c758358042cf04461B06D354aCe65";
   const signer = await ethers.provider.getSigner()
   contract = new ethers.Contract(contractAddress, abi, ethers.provider);
   ```
