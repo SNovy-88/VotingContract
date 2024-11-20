@@ -32,7 +32,7 @@ XXXXXX
   npx hardhat console --network sepolia
   ```
 * Update files
-  - add your own .env and hardhat.config.js files 
+  - add your own .env and hardhat.config.js files to the root folder
 * Connect to contract
   ```
   const abi = require('./VotingSystem.json').abi; //update to your location of the file
@@ -40,4 +40,20 @@ XXXXXX
   const signer = await ethers.provider.getSigner()
   contract = new ethers.Contract(contractAddress, abi, ethers.provider);
   ```
+* Use the functions
+  - get the question with options
+    ```
+    votingDetails = await contract.getVotingDetails();
+    votingDetails
+    ```
+  - vote
+    ```
+    vote = await contract.vote("option", {value: ethers.parseEther("0.002") });
+    vote
+    ```
+  - get results
+    ```
+    results = await contract.getResults();
+    results
+    ```
   
