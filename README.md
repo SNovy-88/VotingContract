@@ -32,7 +32,8 @@ Contract address on Sepolia Blockchain:
   npx hardhat console --network sepolia
   ```
 * Update files
-  - add your own .env and hardhat.config.js files to the root folder
+  - add your own private key and if needed your infura key to temp.env and rename it to .env 
+  - update the URL and Private Key in temp_hardhat.config.js to match your details and rename the file to hardha.config.json
 * Connect to contract
   ```
   const abi = require('./VotingSystem.json').abi; //update to your location of the file
